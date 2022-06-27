@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js1/test14.html</title>
+<script type="text/javascript">
+	//3. 내장 객체 => 화면(브라우저) 제어하는 객체(변수, 함수 정의) ★
+	//	 window 객체   - location 객체
+	// 				   - history 객체
+	// 				   - document 객체 - image 객체, div, ...
+	//                                 - form 객체 - text, password, textarea 객체
+	//                                             - checkbox, radio 객체
+	//                                             - select 객체
+	
+	// 	window.document.폼이름.라디오상자이름[0].멤버변수 			document.fr.ra[0].type
+	// 																document.fr.ra[0].name
+	//																document.fr.ra[0].value
+	// 																document.fr.ra[0].checked // 체크되어있으면 true / 안되어있으면 false
+	//	window.document.폼이름.라디오상자이름[0].멤버변수()			document.fr.ra[0].focus() 
+	//																document.fr.ra[0].blur() 
+	//																document.fr.ra[0].click()
+	
+	function fun1() {
+		alert(document.fr.ra[0].type);
+		alert(document.fr.ra[0].name);
+		alert(document.fr.ra[0].value);
+		alert(document.fr.ra[0].checked);
+		
+// 		document.fr.ra.focus(); // 사라짐
+		document.fr.ra[0].click();
+	}
+	
+	function fun2() {
+		document.fr.ra[0].checked = true;
+	}
+	function fun3() {
+		if(document.fr.ra[0].checked == false && document.fr.ra[1].checked == false){
+			alert("라디오 상자를 선택하세요!");
+			return;
+		}
+		if(document.fr.ch[0].checked == false && document.fr.ch[1].checked == false && document.fr.ch[2].checked == false){
+			alert("체크박스를 선택하세요!");
+			return;
+		}
+		document.fr.submit();
+	}
+
+	
+</script>
+
+</head>
+
+<body>
+
+	<form action="a.jsp" method="get" name="fr">
+		<b>라디오상자</b> <br>
+		<input type="radio" name="ra" value="남">남성<br>
+		<input type="radio" name="ra" value="녀">여성<br> 
+		<br>
+		<b>체크박스</b> <br>
+		<input type="checkbox" name="ch" value="여행">여행 
+		<input type="checkbox" name="ch" value="게임">게임 
+		<input type="checkbox" name="ch" value="독서">독서<br>
+
+		<input type="button" value = "라디오상자 정보" onclick="fun1()">
+		<input type="button" value = "라디오상자 정보 변경" onclick="fun2()">
+		<input type="button" value = "라디오상자 / 체크박스 제어" onclick="fun3()">
+
+	</form>
+
+</body>
+
+
+</html>

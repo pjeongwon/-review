@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js1.test19.html</title>
+<script type="text/javascript">
+	
+	window.onload=function(){
+		
+		document.getElementById("myfr").onsubmit = function() {
+		// submit은 폼태그에 id를 만들고 제어해야함!
+			
+// 			alert("함수호출");
+			
+			if(document.getElementById("id").value == ""){
+				alert("아이디를 입력해주세요");
+				document.fr.id.focus();
+				return false;
+			}
+			if(document.getElementById("pass").value == ""){
+				alert("비밀번호를 입력해주세요");
+				document.fr.pass.focus();
+				return false;
+			}
+			if(document.getElementById("intro").value ==""){
+				alert("자기소개를 입력해주세요");
+				document.fr.intro.focus();
+				return false;
+			}
+			if(document.getElementById("gender1").checked == false && document.getElementById("gender2").checked == false){
+				alert("성별을 선택해주세요");
+				
+				return false;
+			}
+			if(document.getElementById("hobby1").checked == false && document.getElementById("hobby2").checked == false && document.getElementById("hobby3").checked == false){
+				alert("취미를 선택해주세요");
+				
+				return false;
+			}
+			if(document.getElementById("grade").value ==""){
+				alert("학년을 선택해주세요");
+				document.fr.grade.focus();
+				return false;
+			}
+// 			document.fr.submit(); submit 버튼은 필요없음
+}
+		}
+
+		
+</script>
+
+</head>
+<body>
+
+<form action="a.jsp" method="get" name="fr" id="myfr">
+
+
+
+		아이디 <input type="text" name="id" placeholder="아이디" id = "id"><br> 
+		비밀번호 <input type="password" name="pass" placeholder="비밀번호" id ="pass"><br>
+		자기소개 <textarea name="intro" rows="5" cols="10" placeholder="입력하세요" id="intro"></textarea><br>
+		성별
+		<input type="radio" name="gender" value="남" id="gender1">남성
+		<input type="radio" name="gender" value="녀" id="gender2">여성<br> 
+		취미
+		<input type="checkbox" name="hobby" value="여행" id="hobby1">여행 
+		<input type="checkbox" name="hobby" value="게임" id="hobby2">게임 
+		<input type="checkbox" name="hobby" value="독서" id="hobby3">독서<br>
+		
+		<select name = "grade" id="grade">
+		<option value = "">학년을 선택하세요</option>
+		<option value = "1">1학년</option>
+		<option value = "2">2학년</option>
+		<option value = "3">3학년</option>
+		</select>
+		<br>
+		
+	<input type="submit" value="회원가입" >
+	
+
+</form>
+
+
+</body>
+</html>

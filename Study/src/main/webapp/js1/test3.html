@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js1/test3.html</title>
+
+<script type="text/javascript">
+// 1. 변수 => 수정 최소화 
+// 2. 함수 => 자동화 ★
+// 3. 객체 => 화면 제어하는 객체	
+
+// 함수 : 자주 사용되는 기능을 정의하고 이름 부여 
+// 함수 사용 : 함수 이름 호출해서 사용
+
+// 함수 정의
+function cal(a, b) {
+	// cal 이름부여
+	// 자주 사용되는 기능을 정의
+// 	var a = 10;
+// 	b = 20;
+	alert(a + b);
+	alert(a - b);
+	alert(a * b);
+	alert(a / b);
+	// 함수 호출한 곳을 되돌아감, return 되돌아갈 값이 없으면 생략가능
+	return;
+	// 리턴되면 함수호출 한 곳cal2(10, 20)이 변수로 변경되어서 리턴 저장 
+}
+
+function cal2(a, b) {
+	alert("cal2 호출");
+	return a + b;
+}
+
+function cal3(a, b) {
+	return a * b;
+}
+// 함수 호출
+// cal();
+</script>
+
+
+
+
+
+</head>
+<body>
+
+<input type="button" value = "함수호출" onclick="cal(10, 20)">
+<input type="button" value = "함수호출" onclick="cal(100, 200)">
+<input type="button" value = "함수호출" onclick="cal(3, 7)">
+
+<input type="button" value = "리턴되는 함수 호출 1" onclick="alert(cal2(10, 20) / 2 )">
+
+<input type="button" value="리턴되는 함수 호출 2" onclick="alert(cal3(10, 20))">
+
+
+</body>
+</html>

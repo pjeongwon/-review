@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js1/test5.html</title>
+<script type="text/javascript">
+	// 내장함수 : 자바스크립트 만들 때부터 미리 만들어 놓은 함수
+
+	// alert() : 메시지 출력 함수
+
+	// 	// confirm() : 확인 취소 함수 (정말 삭제하시겠습니까? 확인 / 취소)
+	// 	var a = confirm("확인 취소를 눌려주세요"); // 확인 / 취소 누르는 값이 a에 저장
+	// 	//alert(a); // 확인 => true, 취소 => false
+	// 	// 확인 => "확인을 선택", 취소 => "취소를 선택"
+	// 	if (a == true) {
+	// 		alert("확인을 선택");
+	// 	} else if (a == false) {
+	// 		alert("취소를 선택");
+	// 	}
+	//
+	// 	// prompt() : 외부에서 입력해서 받을 수 있는 함수
+	// 	var b = prompt("입력하세요"); // 입력 받은 값은 문자값(순수 문자, 숫자형태 문자)
+	// 	alert(b);
+	// 	alert(b + 100) // 문자 + 100 => 연결자 ex) 5 + 100 => 5100
+	// 	alert(b * 100); // 숫자 * 100 => 자동으로 형이 변경 ex) 5 * 100 => 500
+	// 	// parseInt() :  숫자형태의 문자를 숫자(정수형)로 변경
+	// 	alert(parseInt(b) + 100); // b를 숫자로 바꿔서 덧셈 ex) 5 + 100 => 105
+
+	// isNaN() : is not a number 문자(true) / 숫자, 숫자 형태 문자(false) 판별하는 함수
+
+	// 	var c = isNaN(5);
+	// 	alert(c);
+	// 	if (c == true) {
+	// 		alert("순수 문자를 입력");
+	// 	} else if (c == false) {
+	// 		alert("숫자를 입력");
+	// 	}
+
+// 	자바 - "문자열" 'c' => 자바스크립트 - "",'' 상관없이 문자열
+
+	var d = prompt("입력하세요");
+	var e = isNaN(d);
+	if (e == true) {
+		alert(d);
+	} else if (e == false) {
+		alert(parseInt(d) + 100); // d = 3.14 -> 103
+		// 실수형 변경 parseFloat()
+		alert(parseFloat(d) + 100); // d = 3.14 -> 103.14
+	}
+	
+	
+
+	alert(5);
+	alert('5'); // => "'5'"
+	alert("5"); // => '"5"'
+	</script>
+
+</head>
+
+<body>
+
+
+
+
+</body>
+
+</html>

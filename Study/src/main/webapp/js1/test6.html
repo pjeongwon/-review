@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js1/test6.html</title>
+<script type="text/javascript">
+	
+	// 기본 함수
+	function cal(a, b){
+		return a + b;
+	}
+	// 함수 호출
+// 	alert(cal(10, 20));
+	
+	// 익명 함수 : 이름 없는 함수
+	var cal2 = function(a, b){
+		return a + b;
+	}
+	// 익명 함수 호출
+// 	alert(cal2(100, 200));
+	
+	// 즉시 실행 함수 : 한 번만 실행하는 함수를 정의하며서 동시에 실행
+	(function (a, b) {
+		cal3 = a + b;
+	}(3, 7));
+	// 즉시 실행 함수 호출
+// 	alert(cal3);
+	
+
+	// 화살표 함수 (매개 변수) => {함수 내용}
+// 	var hi = function(){
+// 		return "안녕";
+// 	}
+// 	hi = () => {return "안녕"};
+
+// 	hi = () => "안녕";
+	
+// 	alert(hi());
+
+// 	hi = function(user) {
+// 		return user + "안녕";
+// 	}
+	hi = (user) => {return user + "안녕"};
+	alert(hi("홍길동"));
+	
+	
+	cal4 = function(a, b) {
+		return a + b;
+	}
+	
+// 	cal4 = (a, b) => a + b;
+// 	alert(cal4(10, 20));
+	
+	</script>
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

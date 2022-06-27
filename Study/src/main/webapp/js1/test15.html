@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js1/test15.html</title>
+<script type="text/javascript">
+	//3. 내장 객체 => 화면(브라우저) 제어하는 객체(변수, 함수 정의) ★
+	//	 window 객체   - location 객체
+	// 				   - history 객체
+	// 				   - document 객체 - image 객체, div, ...
+	//                                 - form 객체 - text, password, textarea 객체
+	//                                             - checkbox, radio 객체
+	//                                             - select 객체
+
+	// 	window.document.폼이름.목록상자이름.멤버변수 			document.fr.sel.type
+	// 															document.fr.sel.name
+	// 															document.fr.sel.value
+	//															document.fr.sel.selectedIndex // 선택된 항목의 순서값
+	
+	// 	window.document.폼이름.목록상자이름.멤버변수 			document.fr.sel.options
+	// 	window.document.폼이름.목록상자이름.options[0].멤버변수 // 사용 거의 안함
+	// 															window.document.폼이름.목록상자이름.options[0].text
+	// 															window.document.폼이름.목록상자이름.options[0].value
+	// 															window.document.폼이름.목록상자이름.options[0].selected
+	
+	//	window.document.폼이름.목록상자이름.멤버변수()			document.fr.sel.focus() 
+	//															document.fr.sel.blur() 
+	//															document.fr.sel.click()
+	
+	function fun1() {
+		alert(document.fr.sel.type);
+		alert(document.fr.sel.name);
+		alert(document.fr.sel.value);
+		alert(document.fr.sel.selectedIndex);
+		
+		document.fr.sel.focus();
+		document.fr.sel.blur();
+	}
+
+	function fun2() {
+		document.fr.sel.selectedIndex = 3;		
+	}
+
+	function fun3() {
+//		if(document.fr.sel.value == ""){
+		if(document.fr.sel.selectedIndex == 0){
+			alert("항목을 선택해주세요!");
+			document.fr.sel.focus();
+			return;
+		} 
+		document.fr.submit();
+	}
+	
+	function fun4() {
+		alert(document.fr.sel.options[0].text);
+		alert(document.fr.sel.options[0].value);
+		alert(document.fr.sel.options[0].selected);
+	}
+	
+	function fun5() {
+		if(document.fr.sel.options[0].selected == true){
+			alert("항목을 선택해주세요!");
+			document.fr.sel.focus();
+			return;
+		}
+		document.fr.submit();		
+	}
+	
+</script>
+
+</head>
+
+<body>
+	
+	<form action="a.jsp" method="get" name = "fr">
+	
+	<select name = "sel">
+		<option value = "">선택하세요</option>
+		<option value = "item1">항목1</option>
+		<option value = "item2">항목2</option>
+		<option value = "item3">항목3</option>
+	</select>
+
+	<br>
+
+	<input type="button" value="select 상자정보" onclick="fun1()">
+	<input type="button" value="select 상자정보 변경" onclick="fun2()">
+	<input type="button" value="select 상자제어" onclick="fun3()">
+	<input type="button" value="select 옵션상자정보" onclick="fun4()">
+	<input type="button" value="select 옵션상자제어" onclick="fun5()">
+	
+	
+	
+	</form>
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>

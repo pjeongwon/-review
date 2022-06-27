@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//3. 내장 객체 => 화면(브라우저) 제어하는 객체(변수, 함수 정의) ★
+	//	 window 객체   - location 객체
+	// 				   - history 객체
+	// 				   - document 객체 - image 객체, div, ...
+	//                                 - form 객체 - text, password, textarea 객체
+	//                                             - checkbox, radio 객체
+	//                                             - select 객체
+
+	// location : 윈도우 창 안에 있는 주소줄 주제
+	// window 생략 가능
+	// window.location.멤버변수, window.location.메서드()
+	// 		  location.href : 주소줄에 주소가 저장되는 변수
+	//        location.reload() : 새로고침
+
+	function fun1() {
+		alert(location.href());
+	}
+	function fun2() {
+		location.href = "http://www.naver.com";
+	}
+	function fun3() {
+		alert("test7.html 이동!")
+		location.href = "test7.html";
+	}
+	function fun4() {
+		location.reload();
+	}
+</script>
+
+</head>
+
+
+<body>
+
+	<a href="h"> 하이퍼링크</a>
+	<input type="button" value="주소줄 주소" onclick="fun1()">
+	<input type="button" value="네이버로 이동" onclick="fun2()">
+	<input type="button" value="test7.html" onclick="fun3()">
+	<input type="button" value="새로고침" onclick="fun4()">
+
+</body>
+
+
+
+</html>

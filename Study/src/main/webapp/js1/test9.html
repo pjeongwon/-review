@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js1/test9.html</title>
+
+<script type="text/javascript">
+	//3. 내장 객체 => 화면(브라우저) 제어하는 객체(변수, 함수 정의) ★
+	//	 window 객체   - location 객체
+	// 				   - history 객체
+	// 				   - document 객체 - image 객체, div, ...
+	//                                 - form 객체 - text, password, textarea 객체
+	//                                             - checkbox, radio 객체
+	//                                             - select 객체
+
+	// history : 윈도우 창에서 방문한 기록을 저장하는 내장 객체
+	// window 생략 가능
+	// window.history.멤버변수, window.history.메서드()
+	// 		  history.length : 방문한 기록의 개수     
+	//        history.back() : 한 칸 뒤로이동 / history.forward() 한 칸 앞으로 이동
+	//		  history.go(-5) : 5칸 뒤로 이동  / history.go(5) : 5칸 앞으로 이동
+	//		  history.go(-1) : 1칸 뒤로 이동  / history.go(1) : 1칸 앞으로 이동
+
+	function fun1() {
+		alert(history.length);
+	}
+	function fun2() {
+		history.back();
+	}
+	function fun3() {
+		history.forward();
+	}
+	function fun4() {
+		alert("두 칸 뒤로 이동")
+		history.go(-2);
+	}
+	function fun5() {
+		alert("두 칸 앞으로 이동")
+		history.go(2);
+	}
+</script>
+
+</head>
+
+<body>
+
+	<input type="button" value="방문 기록 개수" onclick="fun1()">
+	
+	<input type="button" value="한 칸 뒤로 이동" onclick="fun2()">
+	<input type="button" value="한 칸 앞으로 이동" onclick="fun3()">
+	
+	<input type="button" value="두 칸 뒤로 이동" onclick="fun4()">
+	<input type="button" value="두 칸 앞으로 이동" onclick="fun5()">
+
+
+
+
+
+
+</body>
+</html>
