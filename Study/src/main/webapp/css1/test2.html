@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css1/test2.html</title>
+<style type="text/css">
+/* 	대상{ */
+/* 		속성 : 값; */
+/* 		속성 : 값; */
+/* 	} */
+/* 	대상 전체 * / 태크 h1, p, id = 이름표시 - #이름, class = 이름표시 - .이름 */
+* {
+	color: blue;
+}
+
+h1 {
+	color: red;
+}
+
+p {
+	color: green;
+}
+/* 표시 : 큰 범위 id = "aa" */
+#aa {
+	color: yellow;
+}
+/* 표시 : 작은 범위 class = "bb" */
+.bb {
+	color: purple;
+}
+/* id = "cc" 배경색 pink */
+/* class = "dd" 배경색 yellow */
+#cc {
+	background-color: pink;
+}
+
+.dd {
+	background-color: yellow;
+}
+</style>
+</head>
+<body>
+	<div id="cc">
+		<h1>레드향</h1>
+		<p>
+			껍질에 붉은 빛이 돌아 <span class="dd">레드향</span>이라 불린다
+		</p>
+		<p id="aa">
+			레드향은 한라봉과 귤을 교배한 것으로 <br>일반규보다 2~3배 크고 , 과육이 붉고 통통하다
+		</p>
+		<p class="bb">
+			비타민 C와 비타민 P가 풍부해 <br> 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다
+		</p>
+	</div>
+</body>
+</html>

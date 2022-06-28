@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css1/test11.html</title>
+
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: #ccc;
+	padding: 20px;
+}
+
+form {
+	background-color: white;
+	border: 1 solid #222;
+	border-radius: 5px;
+	padding: 20px;
+	width: 400px;
+	margin: 30px auto;
+}
+
+form fieldset {
+	border: 1 solid #ccc;
+	margin-bottom: 30px;
+}
+
+form legend {
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 5px;
+	padding-bottom: 10px;
+}
+
+form ul li {
+	line-height: 30px;
+	list-style-type: none;
+	padding: 5px 10px;
+	margin-bottom: 2px;
+}
+
+form label {
+	float: left;
+	font-size: 13px;
+	width: 110px; /* 	라벨 뒤 텍스트 상자 정렬 */
+}
+
+form input:not([type=submit]) {
+	border: 1 solid #ccc;
+	border-radius: 3px;
+	font-size: 13px;
+	width: 200px;
+	padding: 5px;
+}
+
+form input[required] {
+	border: 1px solid red;
+}
+
+form input[readonly] {
+	border: none;
+}
+/* 마지막 fieldset 지정 */
+form fieldset:last-of-type {
+	border: 0px;
+	margin-bottom: 0px;
+}
+/* 제출버튼 */
+form input[type=submit] {
+	border: 1 solid #222;
+	border-radius: 20px;
+	font-size: 16px;
+	letter-spacing: 1px;
+	padding: 7px 25px;
+	margin: auto;
+/* 	display: block로 버튼 전체 영역으로 지정 -> margin: auto 바깥 여백 자동으로 인해 중앙정렬 */
+	display: block; 
+}
+</style>
+
+</head>
+<body>
+
+	<form action="a.jsp">
+		<fieldset>
+			<legend>로그인 정보</legend>
+			<ul>
+				<li><label>아이디</label><input type="text" name="id" required
+					autofocus></li>
+				<li><label>비밀번호</label><input type="password" name="pw1"
+					required></li>
+				<li><label>비밀번호 확인</label><input type="password" name="pw2"
+					required></li>
+				<li><label>회원 등급</label><input type="text" name="id"
+					value="준회원" readonly></li>
+
+			</ul>
+		</fieldset>
+
+		<fieldset>
+			<legend>개인 정보</legend>
+			<ul>
+				<li><label>이름</label><input type="text" name="name"
+					placeholder="5자 미만 공백없이" required></li>
+				<li><label>메일 주소</label><input type="email" name="email"
+					placeholder="abcd@domain.com" required></li>
+				<li><label>연락처</label><input type="tel" name="tel"></li>
+			</ul>
+
+		</fieldset>
+
+		<fieldset>
+			<input type="submit" value="제출">
+		</fieldset>
+
+	</form>
+
+
+</body>
+</html>

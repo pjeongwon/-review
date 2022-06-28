@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css1/test7.html</title>
+<style type="text/css">
+body * {
+	border: 1px solid black;
+
+	/* 	h1, p, div 블록 레벨 요소 : 전체 영역  */
+	/* span, strong... 인라인 레벨 요소 : 대상(작은) 영역 */
+}
+
+h1 {
+	/* 	안여백 */
+	padding: 10px;
+	/* 	테두리 선 */
+	border: 10px solid black;
+	/* 	밖 여백 */
+	margin: 10px;
+	/* 	콘텐츠 영역 지정 - px고정값, %브라우저 크기에 따라 변동*/
+	width: 100px;
+	height: 100px;
+	/* 	width : 30%; height : 30%; */
+	/* 	콘텐츠 기준 배치 기본값 content-box, 테두리 선 기준 배치 border-box */
+	box-sizing: border-box;
+}
+
+p {
+	/* 	border: 1px solid black; */
+	/* 	테두리 두께 전체, 위아래, 좌우*/
+	/* 	border-width : 10px 10px; */
+	/* 	border-width : 1px 10px 20px 30px; */
+	border-top-width: 1px;
+	border-right-width: 10px;
+	border-bottom-width: 20px;
+	border-left-width: 30px;
+	/* 	border-width: 1px; */
+	/* 	테두리 스타일 */
+	/* 	border-style : double; */
+	/* 	border-style : solid dotted; */
+	/* 	border-style : solid dotted dashed double; */
+	border-top-style: solid;
+	border-right-style: dotted;
+	border-bottom-style: dashed;
+	border-left-style: double;
+	/* 	테두리 색상  */
+	/*  border-color : black;  */
+	/*  border-color : red green;  */
+	border-color: red green blue purple;
+	/*  border-top-color : red;  */
+	/*  border-right-color : green;  */
+	/*  border-bottom-color : blue;  */
+	/*  border-left-color : purple; */
+	/* 	안 여백  전체,	위아래/왼오른쪽,	위 오른쪽 아래 왼쪽*/
+	/* 	padding : 50px; */
+	/* 	padding : 20px 50px; */
+	/* 	padding : 20px 50px 100px 200px; */
+	padding-top: 20px;
+	padding-right: 50px;
+	padding-bottom: 100px;
+	padding-left: 200px;
+	/* 	밖 여백 전체,	위아래/왼오른쪽,	위 오른쪽 아래 왼쪽*/
+	/* 	margin: 50px; */
+	/* 	margin : 20px 50px;  */
+	/* 	margin : 20px 50px 100px 200px;  */
+	margin-top: 20px;
+	margin-right: 50px;
+	margin-bottom: 100px;
+	margin-left: 200px;
+	/*  	p1태크 아래 여백, p2태크 위 여백 중첩(겹쳐짐)  */
+}
+
+div {
+	/* 	모서리 둥글게 */
+	width: 300px;
+	height: 200px;
+	border: 1px solid black;
+	/* 	모서리 둥글게 25px 25% */
+	border-radius: 25%;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 20px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 20px;
+	box-shadow: 2px -2px 5px 0px;
+	margin: 50px;
+}
+
+img {
+	border-radius: 25px;
+	/* 	박스모델에 그림자 효과 - 수평 수직 흐림정도 번짐정도 색상*/
+	box-shadow: 5px 5px 15px 5px blue;
+}
+</style>
+</head>
+<body>
+	<img src="4.jpg" width="200px" height="250px">
+	<div></div>
+
+	<h1>레드향</h1>
+	<p>
+		껍질에 붉은 빛이 돌아 <span class="dd">레드향</span>이라 불린다
+	</p>
+	<p id="aa">
+		레드향은 한라봉과 귤을 교배한 것으로 <br>일반규보다 2~3배 크고 , 과육이 붉고 통통하다
+	</p>
+	<p class="bb">
+		비타민 C와 비타민 P가 풍부해 <br> 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다
+	</p>
+
+
+
+
+
+
+</body>
+</html>

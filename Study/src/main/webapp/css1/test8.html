@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css1/test8.html</title>
+
+<style type="text/css">
+body * {
+	/* 	border: 1px solid black; */
+	
+}
+
+ul {
+	/*  목록스타일 블릿 없애기 */
+	list-style-type: none;
+}
+
+li {
+	border: 1px solid black;
+	/*  안 여백 20px */
+	padding: 20px;
+	/* 	밖 여백 위아래 0px, 왼오른쪽 20px  */
+	margin: 0px 20px;
+	/* 	배치 방법 결정 display 속성 */
+	display: inline-block;
+}
+
+img {
+	/* 	왼쪽 오른쪽 어울림 배치 float */
+	float: left;
+}
+
+div {
+	/* 	float속성을 해제 - clear속성 left, right, both*/
+	clear: both;
+}
+</style>
+</head>
+<body>
+	<img src="4.jpg" width="130" height="150">
+	<p>가나다라마바사</p>
+	<p>가나다라마바사</p>
+	<p>가나다라마바사</p>
+	<p>가나다라마바사</p>
+
+
+	<div>
+		<ul>
+
+			<li>메뉴1</li>
+			<li>메뉴2</li>
+			<li>메뉴3</li>
+			<li>메뉴4</li>
+
+		</ul>
+
+	</div>
+
+
+
+
+</body>
+</html>

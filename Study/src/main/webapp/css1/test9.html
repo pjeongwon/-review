@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css1/test9.html</title>
+<style type="text/css">
+
+*{
+/*  전체 영역 여백 없애기 */
+	padding: 0px; margin: 0px;
+/* 	테두리선을 기준을 영역 표시 배치 */
+	box-sizing: border-box;
+}
+
+#aa{
+/* 	배경색 */
+	background-color: yellow;
+/* 	너비 - 1200px	 */
+	width: 1200px;
+/* 	밖 여백 - 위아래 20px, 왼오른쪽 auto(적당하게 가운데 정렬) */
+	margin: 20px auto;
+}
+#header{
+/* 	너비 100% 높이 120px 배경색 green */
+	width : 100%; height : 120px; background-color: green;
+}
+#leftside{
+/* 	너비 300px 높이 600px 배경색 pink */
+	width : 300px; height : 600px; background-color: pink;
+	float : left;
+}
+#bb{
+	/*너비 900px 높이 600px 배경색 skyblue */
+	width : 900px; height : 600px; background-color: skyblue;
+	float : left;
+}
+#footer{
+	color : white;
+	/*너비 100% 높이 100px 배경색 blue */
+	width : 100%; height : 100px; background-color: blue;
+	clear : left;
+}
+
+</style>
+</head>
+<body>
+
+<div id = "aa">
+	<div id = "header">헤더</div>
+	<div id = "leftside">왼쪽 메뉴</div> <div id = "bb">본문</div>
+	<div id = "footer">푸터</div>
+</div>
+
+</body>
+</html>
