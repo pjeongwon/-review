@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html1/test6.html</title>
+</head>
+<body>
+<!-- 
+웹에서 사용하는 이미지
+	jpg : 사진 파일, 색상 명암 다양하게 표현
+	gif : 크기가 작은 아이콘이나 블릿 작은 이미지
+	png : 색상 다양, 투명한 배경, 웹 용 
+
+src 이미지 파일
+alt 이미지 없을 때 설명 글 
+
+크기 px 픽셀 전체 화면 크기를 기준으로 고정
+     % 웹 브라우저의 크기에 따라 상대적으로 크기 변동
+-->
+
+
+<img src = "1.jpeg" alt = "펭수" width = "300" height = "350">
+
+<img src = "2.jpg" width = "50%">
+
+<!-- 상대참조 : 현 페이지 test6.html파일 기준으로 해서 다른 파일을 찾음 -->
+
+<img src = "img/3.jpg" > 
+
+<!-- . - 현 폴더 .. - 상위 폴더 -->
+
+<img src = "../css1/4.jpg">
+
+<img src = "../css1/img1/5.jpg">
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html1/test8.html</title>
+</head>
+<body>
+
+<!-- submit버튼을 클릭하면 form안에 있는 이름=값을 들고 서버 전송 => a.jsp로 이동  -->
+<!-- method="get"폼에서 입력한 데이터를 들고 갈 때 get방식이면 주소줄에 보이면서 이동 
+http://localhost:8080/Study/html1/a.jsp?tx=like+this-->
+<!-- method="post"폼에서 입력한 데이터를 들고 갈 때 post방식은 주소줄에 안보이게 서버 전송 
+http://localhost:8080/Study/html1/a.jsp -->
+
+<h1>양식(폼) 태그</h1>
+
+<form action="a.jsp" method="get" >
+
+<fieldset>
+<legend>필수요소</legend>
+
+<!-- ★placeholder - 박스 안 값을 입력하세요 - 반투명한 글 -->
+<!-- ★autofocus   -  자동으로 박스안에 커서가 깜빡임 -->
+<!-- ★readonly = "readonly"     - 수정x, 읽기만 가능 -->
+<!-- ★required - 값을 입력 하지 않으면 넘어가지 x  -->
+
+<label>텍스트 상자 :</label> <input type = "text" name = "tx" size = "100" maxlength = "10"><br>
+<label>비밀번호 상자 :</label> <input type = "password" name = "pw"><br>
+</fieldset>
+이메일 주소 : <input type = "email" name = "email"><br>
+검색 : <input type = "search" name = "sea"><br>
+URL 주소 : <input type = "url" name ="url"><br> 
+tel(모바일 적용) : <input type = "tel" name = "tel"><br>
+
+<!-- radio : 선택 버튼 (name을 동일하게 해야 선택가능, name이 다를 경우 복수선택 가능) -->
+성별 : <input type = "radio" name = "ra" value = "남" >남
+<input type = "radio" name = "ra" value = "여">여
+취미 : <input type = "checkbox" name = "ch" value = "여행">여행
+<input type = "checkbox" name = "ch" value = "게임">게임
+<input type = "checkbox" name = "ch" value = "독서">독서
+
+숫자 : <input type = "number" name = "num" min = "0" max = "10" step = "2" value = "2"><br>
+막대숫자 : <input type = "range" name = "num2" min = "1" max = "3" step = "1" value = "1"><br>
+
+날짜 : <input type = "date" name = "d" min = "2021-08-01" max = "2021-08-10"><br>
+월 : <input type = "month" name = "m"><br>
+주 : <input type = "week" name = "w"><br>
+
+시간 : <input type = "time" name = "t"><br>
+날짜 시간 : <input type = "datetime-Local" name = "dt"><br>
+
+파일 : <input type = "file" name = "file"><br>
+숨기 데이터 : <input type = "hidden" name = "hi" value = "hi"><br>
+
+<!-- ------------------------------------------------------------------- -->
+
+긴 텍스트 상자 : <textarea name = "tx2" rows = "10" cols = "20">value값</textarea><br>
+목록 상자 : 
+<!--  size = "3" - 목록상자 크기 / multiple - 복수선택 가능  === 잘 사용 x -->
+<select name = "se">
+	<option value = "1">목록1</option>
+	<option value = "2" selected>목록2</option>
+	<option value = "3">목록3</option>
+	<option value = "4">목록4</option>
+	<option value = "5">목록5</option>
+</select>
+<br>
+<!-- ------------------------------------------------------------------- -->
+
+<input type = "text" list = "dlist">
+<datalist id = "dlist">
+	<option value = "값1">선택옵션1</option>
+	<option value = "값2">선택옵션2</option>
+	<option value = "값3">선택옵션3</option>
+</datalist>
+<br>
+
+<input type = "submit" value = "전송버튼"><br>
+<!-- 전송이미지 버튼 -->
+<input type = "image" src = "2.jpg" width = "50" height = "50"><br>
+<input type = "reset" value = "초기화"><br>
+<input type = "button" value = "버튼"><br>
+
+
+
+
+
+</form>
+
+
+
+</body>
+</html>
